@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostles Spotlights</title>
+    <style>
+        /* Insert styles here */
+        body{
+            background: #E8ECED;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            background-image: url("images/christus.webp");
+            background-size: auto 1600px;
+            background-position: calc(50% - 70px) top;
+            border: 20px solid #000000;
+            width: 1936px;
+            margin: 100px auto;
+            padding: 20px 84px 20px 20px;
+            text-align: center;
+            border-radius: 90px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+        h1 {
+            color: #FFFFFE;
+            font-weight: normal;
+            font-size: 86px;
+            margin: 4px auto 10px auto;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+        }
+        h3 {
+            color: #FFFFFE;
+            font-weight: normal;
+            font-size: 55px;
+            margin: 20px auto;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+        }
+        .first-presidency {
+            display: flex;
+            justify-content: center;
+            gap: 75px;
+            align-items: baseline;
+        }
+        .first-presidency img {
+            width: 290px;
+            height: 290px;
+            object-fit: cover;
+            border: 20px solid white;
+            border-radius: 50%;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.7);
+            transition: border-color 0.5s ease, transform 0.5s ease;
+        }
+        .first-presidency img:nth-child(2) {
+            width: 310px;
+            height: 310px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+        .quorum {
+            display: grid;
+            grid-template-columns: 248px 248px 248px 248px;
+            column-gap: 56px;
+            row-gap: 70px;
+            margin-bottom: 60px;
+            justify-content: center;
+        }
+        .quorum img {
+            width: 210px;
+            height: 210px;
+            object-fit: cover;
+            object-position: 50% 15%;
+            border: 19px solid white;
+            border-radius: 50%;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.7);
+            transition: border-color 0.5s ease, transform 0.5s ease;
+        }
+        .first-presidency img:hover, .quorum img:hover {
+            border-color: #E8A33D;
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Insert HTML elements here -->
+     <div class="card">
+        <h1>First Presidency</h1>
+        <div class="first-presidency">
+            <img src="images/eyring.webp" alt="portrait of President Henry B. Eyring, Counselor in the First Presidency">
+            <img src="images/oaks.webp" alt="portrait of President Dallin H. Oaks, President of the Church">
+            <img src="images/christofferson.webp" alt="portrait of President D. Todd Christofferson, Counselor in the First Presidency">
+        </div>
+        <h3>Quorum of the Twelve Apostles</h3>
+        <div class="quorum">
+            <img src="images/uchtdorf.webp" alt="portrait of President Dieter F. Uchtdorf, Acting President of the Quorum of the Twelve">
+            <img src="images/bednar.webp" alt="portrait of Elder David A. Bednar">
+            <img src="images/cook.webp" alt="portrait of Elder Quentin L. Cook">
+            <img src="images/anderson.webp" alt="portrait of Elder Neil L. Andersen">
+            <img src="images/rasband.webp" alt="portrait of Elder Ronald A. Rasband">
+            <img src="images/stevenson.webp" alt="portrait of Elder Gary E. Stevenson">
+            <img src="images/renlund.webp" alt="portrait of Elder Dale G. Renlund">
+            <img src="images/gong.webp" alt="portrait of Elder Gerrit W. Gong">
+            <img src="images/soares.webp" alt="portrait of Elder Ulisses Soares">
+            <img src="images/kearon.webp" alt="portrait of Elder Patrick Kearon">
+            <img src="images/causse.webp" alt="portrait of Elder Gérald Caussé">
+            <img src="images/gilbert.webp" alt="portrait of Elder Clark G. Gilbert">
+        </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #2F5D8C;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        header {
+            background-color: #0B1220;
+            color: #EEF3F9;
+            padding: 0.755rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            letter-spacing: 0.65rem;
+            text-transform: uppercase;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 500;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 332px);
+            row-gap: 60px;
+            justify-items: center;
+            justify-content: center;
+            column-gap: 60px;
+            margin-top: 60px;
+        }
+
+        .cell {
+            background: #95B1D6;
+            position: relative;
+            padding: 16px;
+            outline: 10px solid #0B1220;
+            border-radius: 12px;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+            transition: outline-color 0.12s ease-out;
+        }
+
+        .cell:hover {
+            outline-color: #C8962E;
+            transition: outline-color 0s, top 0.2s ease-out;
+            top: -4px;
+        }
+
+        h2 {
+            margin: 0 0 8px 0;
+            color: #0B1220;
+        }
+
+        #blue {
+            background: blue;
+            grid-column: 1 / 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #white {
+            background: white;
+            grid-column: 2 / 4;
+        }
+
+        #red {
+            background: red;
+            grid-column: 1 / 4;
+        }
+
+        #chile {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        .star {
+            width: 70px;
+            aspect-ratio: 1;
+            background: white;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+
+        #denmark {
+            display: grid;
+            grid-template-columns: 3fr 1fr 5fr;
+            grid-template-rows: 7fr 3fr 7fr;
+            height: 200px;
+            width: 300px;
+            background: white;
+        }
+
+        #dred1 {
+            background: red;
+        }
+
+        #dred2 {
+            background: red;
+            grid-column: 3 / 4;
+        }
+
+        #dred3 {
+            background: red;
+            grid-row: 3 / 4;
+        }
+
+        #dred4 {
+            background: red;
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        #finland {
+            display: grid;
+            grid-template-columns: 5fr 3fr 10fr;
+            grid-template-rows: 4fr 3fr 4fr;
+            height: 200px;
+            width: 300px;
+            background: #002F6C;
+        }
+
+        #fwhite1 {
+            background: white;
+        }
+
+        #fwhite2 {
+            background: white;
+            grid-column: 3 / 4;
+        }
+
+        #fwhite3 {
+            background: white;
+            grid-row: 3 / 4;
+        }
+
+        #fwhite4 {
+            background: white;
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        #benin {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        #bgreen {
+            background: #008751;
+            grid-row: 1 / 3;
+        }
+
+        #byellow {
+            background: #FCD116;
+        }
+
+        #bred {
+            background: #E8112D;
+            grid-row: 2 / 3;
+        }
+
+        #italy {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        #igreen {
+            background: #008C45;
+        }
+
+        #iwhite {
+            background: #F4F9FF;
+        }
+
+        #ired {
+            background: #CD212A;
+        }
+
+        #central-african-republic {
+            display: grid;
+            grid-template-columns: 5fr 2fr 5fr;
+            grid-template-rows: repeat(4, 1fr);
+            height: 200px;
+            width: 300px;
+        }
+
+        #carblue {
+            background: #003082;
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+        }
+
+        #carwhite {
+            background: #FFFFFF;
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+        }
+
+        #cargreen {
+            background: #289728;
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+        }
+
+        #caryellow {
+            background: #FFCE00;
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
+        }
+
+        #carred {
+            background: #D21034;
+            grid-column: 2 / 3;
+            grid-row: 1 / 5;
+        }
+
+        .starcar {
+            width: 45px;
+            aspect-ratio: 1;
+            background: #FFCE00;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+            margin: 3px 0 0 27px;
+        }
+
+        #chile, #denmark,#finland, #benin, #italy, #central-african-republic {
+            border-radius: 7.5px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Using CSS Grid to make Country Flags</h1>
+    </header>
+    <main>
+
+        <div class="cell">
+            <h2>Chile</h2>
+            <div id="chile">
+                <div id="blue">
+                    <div class="star"></div>
+                </div>
+                <div id="white"></div>
+                <div id="red"></div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <h2>Denmark</h2>
+            <div id="denmark">
+                <div id="dred1"></div>
+                <div id="dred2"></div>
+                <div id="dred3"></div>
+                <div id="dred4"></div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <h2>Finland</h2>
+            <div id="finland">
+                <div id="fwhite1"></div>
+                <div id="fwhite2"></div>
+                <div id="fwhite3"></div>
+                <div id="fwhite4"></div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <h2>Benin</h2>
+            <div id="benin">
+                <div id="bgreen"></div>
+                <div id="byellow"></div>
+                <div id="bred"></div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <h2>Italy</h2>
+            <div id="italy">
+                <div id="igreen"></div>
+                <div id="iwhite"></div>
+                <div id="ired"></div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <h2>Central African Republic</h2>
+            <div id="central-african-republic">
+                <div id="carblue">
+                    <div class="starcar"></div>
+                </div>
+                <div id="carwhite"></div>
+                <div id="cargreen"></div>
+                <div id="caryellow"></div>
+                <div id="carred"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
